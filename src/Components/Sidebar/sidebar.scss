@@ -1,0 +1,70 @@
+.sidebar {
+    width: 30rem;
+    height: 100vh;
+    background-color: #383838;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    @media (max-width: 767px) {
+        width: 20rem;
+    }
+
+    @media (max-width: 551px) {
+        display: none;
+    }
+}
+
+.sidebar__inner {
+    height: 100%;
+    position: relative;
+}
+
+.sidebar__inner--title {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #fff;
+}
+
+.createNewRoom {
+    border: 0;
+    background: 0;
+    padding: 0;
+
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.ufo__image {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 1rem;
+}
+
+.sidebar__inner--about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+
+    color: #fff;
+}

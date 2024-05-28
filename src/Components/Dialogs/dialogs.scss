@@ -1,0 +1,131 @@
+.dialogs__inner {
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    // justify-content: start;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+
+    @media (max-width: 551px) and (min-height: 650px) {
+        height: calc(100vh - 16rem);
+    }
+
+    @media (max-width: 551px) {
+        height: calc(100vh - 10rem);
+    }
+}
+
+
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, .5);
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        display: flex;
+    }
+
+    &.password .modal__inner{
+        width: 30rem;
+    }
+}
+
+.modal__inner {
+    width: 45rem;
+    background-color: #fff;
+    border: .5px solid gray;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.modal__title {
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: .8rem 0;
+    border-bottom: .5px solid gray;
+}
+
+.modal_form {
+    padding: 1rem;
+}
+
+.modal__form--item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+    label {
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        background: 0;
+        border: 1px solid gray;
+        padding: .5rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.modal__btn {
+    width: 100%;
+    background: 0;
+    border: 0;
+
+    background-color: #2bc685;
+    color: #fff;
+    padding: .5rem 0;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: #25ad75;
+    }
+}
+
+.modal__close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.wrongPassword {
+    color: #fd0606;
+    margin-top: .5rem;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.modalError {
+    margin-bottom: 1rem;
+    color: #fd0606;
+}

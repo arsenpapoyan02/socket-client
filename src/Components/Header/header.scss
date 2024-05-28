@@ -1,0 +1,26 @@
+.header {
+    width: calc(100% - 30rem);
+    background-color: lightgray;
+    padding: 1rem;
+
+    position: absolute;
+    top: 0;
+    left: 30rem;
+    z-index: 100;
+
+    @media (max-width: 767px) {
+        width: calc(100% - 20rem);
+        left: 20rem;
+    }
+
+    @media (max-width: 551px) {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

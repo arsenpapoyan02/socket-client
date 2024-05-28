@@ -1,0 +1,89 @@
+.chat {
+    width: calc(100% - 30rem);
+    background-color: lightgray;
+    padding: 1rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 30rem;
+    z-index: 10;
+
+    @media (max-width: 767px) {
+        width: calc(100% - 20rem);
+        left: 20rem;
+    }
+
+    @media (max-width: 551px) {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.form__chat--input {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.form {
+    position: relative;
+}
+
+.chat__input {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', 'serif';
+    font-size: 1.6rem;
+    padding: 0 1rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    background: 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 0 2rem;
+    background-color: #2bc685;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: #25ad75;
+    }
+}
+
+.chat__inner--answerTo {
+    margin-bottom: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &.message__layer {
+        margin-top: -.7rem;
+    }
+}
+
+.chat__inner--answerTo--username {
+    font-size: 1.3rem;
+}
+
+.chat__inner--answerTo--text {
+    font-size: 1.2rem;
+}
+
+.chat__inner--answerTo--close {
+    width: 1.3rem;
+    cursor: pointer;
+}

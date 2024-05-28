@@ -1,0 +1,33 @@
+.rooms {
+    display: flex;
+    flex-direction: column;
+}
+
+.room {
+    border-bottom: 1px solid #fff;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover {
+        background-color: #6b6b6b;
+    }
+
+    &.active {
+        background-color: #6b6b6b;
+    }
+}
+
+.room__item {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 12px;
+        margin-left: 1rem;
+    }
+}
+
+.room__item--title {
+    color: #Fff;
+}
