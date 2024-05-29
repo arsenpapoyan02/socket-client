@@ -13,7 +13,6 @@ let socket = socketIO('https://socket-server-qp0w.onrender.com', {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 socket.connect();
 
-console.log(socket.id);
 setTimeout(() => {
   localStorage.setItem('userID', socket.id); 
   if(!localStorage.getItem('pcID')) {
