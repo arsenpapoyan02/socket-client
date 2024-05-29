@@ -6,6 +6,13 @@ class Chat extends React.Component {
 
     render() {
 
+        setTimeout(() => {
+            localStorage.setItem('userID', this.props.socket.id); 
+            if(!localStorage.getItem('pcID')) {
+              localStorage.setItem('pcID', this.props.socket.id);
+            }
+        }, 220);
+
         const changeText = (text) => {
             this.props.changeText(text);
         }
