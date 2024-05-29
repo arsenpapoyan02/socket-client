@@ -13,13 +13,13 @@ let socket = socketIO('https://socket-server-qp0w.onrender.com', {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 socket.connect();
 
-console.log(socket);
+console.log(socket.connected);
 setTimeout(() => {
   localStorage.setItem('userID', socket.id); 
   if(!localStorage.getItem('pcID')) {
     localStorage.setItem('pcID', socket.id);
   }
-}, 190);
+}, 220);
 
 root.render(
 // <React.StrictMode> 
