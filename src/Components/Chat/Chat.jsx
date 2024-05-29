@@ -32,7 +32,7 @@ class Chat extends React.Component {
 
                 console.log(userId);
 
-                if(this.props.socket.id) {
+                if(localStorage.getItem('userID') === this.props.socket.id) {
                     this.props.socket.emit('message', {
                         id: Math.random(),
                         message: message,
