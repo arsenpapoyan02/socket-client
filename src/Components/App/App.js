@@ -6,7 +6,7 @@ import MainContainer from '../Main/MainContainer';
 function App(props) {
 
   props.getSocket(props.socket);
-  console.log(props.socket.id);
+  console.log(props.socket);
   
   return (
     <div className="App">
