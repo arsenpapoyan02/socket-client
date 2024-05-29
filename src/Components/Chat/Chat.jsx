@@ -23,7 +23,7 @@ class Chat extends React.Component {
                     message: this.props.text
                 } : this.props.text;
 
-                if(localStorage.getItem('userID') === this.props.socket.id) {
+                // if(localStorage.getItem('userID') === this.props.socket.id) {
                     this.props.socket.emit('message', {
                         id: Math.random(),
                         message: message,
@@ -32,7 +32,7 @@ class Chat extends React.Component {
                         date: date,
                         reactionsBtn: false
                     })   
-                }
+                // }
             }
         }
 
