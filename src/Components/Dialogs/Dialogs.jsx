@@ -8,8 +8,8 @@ class Dialogs extends React.Component {
     render() {
 
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
-            console.log(this.props.socket);
             this.props.socket.on('response', async (data) => {
+                console.log(data);
                 if(localStorage.getItem('userID') === data.userId && localStorage.getItem('userID') === this.props.socket.id) {
                     this.props.sendMessage(data.message, this.props.activeRoom.roomId, data.id, data.userId, null, data.reactionsBtn);
                 }

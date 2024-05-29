@@ -14,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 socket.connect();
 
 setTimeout(() => {
+  console.log(socket);
   localStorage.setItem('userID', socket.id); 
   if(!localStorage.getItem('pcID')) {
     localStorage.setItem('pcID', socket.id);
