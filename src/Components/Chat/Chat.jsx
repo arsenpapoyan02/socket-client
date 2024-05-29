@@ -11,6 +11,7 @@ class Chat extends React.Component {
         }
 
         const sendText = async (e) => {
+            console.log('pressed');
 
             if((e.code === 'Enter' || e.code === 'NumpadEnter' || e === 'Enter') && this.props.text !== '') {
                 const roomId = this.props.activeRoom.roomId;
