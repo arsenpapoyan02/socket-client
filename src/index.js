@@ -10,7 +10,7 @@ import socketIO from 'socket.io-client';
 let socket = socketIO('https://socket-server-qp0w.onrender.com', {
     autoConnect: true
 });
-const root = ReactDOM.createRoot(document.getElementById('grib'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 socket.connect();
 
 setTimeout(() => {
