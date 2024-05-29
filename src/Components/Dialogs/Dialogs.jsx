@@ -9,9 +9,9 @@ class Dialogs extends React.Component {
 
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
             this.props.socket.on('response', async (data) => {
-                console.log(data);
                 if(localStorage.getItem('userID') === data.userId) {
                     this.props.sendMessage(data.message, this.props.activeRoom.roomId, data.id, data.userId, null, data.reactionsBtn);
+                    console.log(data);
                 }
                 setTimeout( async () => {
                     await this.props.getMessage(this.props.activeRoom.roomId, data.id, data.userId);
