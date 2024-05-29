@@ -23,7 +23,9 @@ class Chat extends React.Component {
                     message: this.props.text
                 } : this.props.text;
 
-                if(localStorage.getItem('userID') === this.props.socket.id) {
+                console.log(userId);
+
+                if(this.props.socket.id) {
                     this.props.socket.emit('message', {
                         id: Math.random(),
                         message: message,
