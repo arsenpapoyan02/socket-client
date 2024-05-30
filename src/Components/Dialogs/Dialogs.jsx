@@ -38,12 +38,6 @@ class Dialogs extends React.Component {
                 this.props.switchMessageReactions(false);
             }
         })
-        
-        const removeMessages = () => {
-            let messages = this.props.activeRoom.messages;
-            let roomId = this.props.activeRoom.roomId;
-            this.props.removeSomeMessages(roomId, messages);
-        }
 
         const closeModal = (e) => {
             if(e.target.offsetParent.className !== 'modal__inner' || e.target.className === 'modal__close') {
