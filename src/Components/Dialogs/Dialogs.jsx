@@ -16,7 +16,9 @@ class Dialogs extends React.Component {
                     await this.props.getMessage(this.props.activeRoom.roomId, data.id, data.userId);
                     const roomMessagesLength = Object.keys(this.props.activeRoom.messages).length;
                     if(roomMessagesLength > 100) {
-                        removeMessages();
+                        let messages = this.props.activeRoom.messages;
+                        let roomId = this.props.activeRoom.roomId;
+                        this.props.removeSomeMessages(roomId, messages);    
                     }
                 }, 220);
             })
