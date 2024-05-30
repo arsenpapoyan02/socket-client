@@ -8,7 +8,7 @@ class Chat extends React.Component {
 
         setTimeout(() => {
             localStorage.setItem('userID', this.props.socket.id); 
-            if(!localStorage.getItem('pcID')) {
+            if(!localStorage.getItem('pcID') || localStorage.getItem('pcID') === 'undefined') {
               localStorage.setItem('pcID', this.props.socket.id);
             }
         }, 220);
