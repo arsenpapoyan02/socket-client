@@ -6,12 +6,6 @@ import MessageContainer from "../Message/MessageContainer";
 class Dialogs extends React.Component {
     
     componentDidMount() {
-        
-        console.log(this.props.socket.id)
-    }
-
-    render() {
-
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
             this.props.socket.on('response', async (data) => {
                 if(localStorage.getItem('userID') === data.userId) {
@@ -33,6 +27,9 @@ class Dialogs extends React.Component {
                 this.props.addReaction(data.messageId, data.pcId, data.reactions);
             })
         }
+    }
+
+    render() {
 
         document.addEventListener('click', (e) => {
             if(e.target.id !== 'reaction' && this.props.reactionsBtn) {
