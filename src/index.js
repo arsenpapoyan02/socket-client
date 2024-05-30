@@ -21,11 +21,11 @@ socket.connect();
 // }, 220);
 
 root.render(
-// <React.StrictMode> 
+<React.StrictMode> 
   <Provider store={store}>
     <AppContainer socket={socket}/>
   </Provider>
-/* </React.StrictMode> */
+</React.StrictMode>
 );
   
 reportWebVitals();
