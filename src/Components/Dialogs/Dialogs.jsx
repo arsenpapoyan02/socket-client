@@ -5,9 +5,12 @@ import MessageContainer from "../Message/MessageContainer";
 
 class Dialogs extends React.Component {
     
-    render() {
+    componentDidMount() {
+        
+        console.log(this.props.socket.id)
+    }
 
-        console.log(this.props.socket.id);
+    render() {
 
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
             this.props.socket.on('response', async (data) => {
