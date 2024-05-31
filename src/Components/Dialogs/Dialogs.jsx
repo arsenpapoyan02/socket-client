@@ -6,7 +6,7 @@ import MessageContainer from "../Message/MessageContainer";
 class Dialogs extends React.Component {
     
     componentDidMount() {
-        this.props.getIP();
+        this.props.getIP().then(res => console.log(res));
 
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
             console.log(this.props.socket);

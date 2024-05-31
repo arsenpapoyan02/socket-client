@@ -212,7 +212,6 @@ export const removeSomeMessages = (roomId, messages) => (dispatch) => {
 
 export const getIP = () => (dispatch) => {
     return usersAPI.getIP()
-    .then(res => console.log(res.data))
 }  
 
 export default dialogsReducer;
