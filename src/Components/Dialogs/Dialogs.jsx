@@ -6,8 +6,7 @@ import MessageContainer from "../Message/MessageContainer";
 class Dialogs extends React.Component {
     
     componentDidMount() {
-        this.props.getIP();
-
+        
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
             console.log(this.props.socket);
             this.props.socket.on('response', async (data) => {
@@ -32,9 +31,10 @@ class Dialogs extends React.Component {
             })
         }
     }
-
+    
     render() {
-
+        
+        this.props.getIP();
         document.addEventListener('click', (e) => {
             if(e.target.id !== 'reaction' && this.props.reactionsBtn) {
                 this.props.switchMessageReactions(false);
