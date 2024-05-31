@@ -51,6 +51,8 @@ export const usersAPI = {
         await update(ref(db, `/${roomId}/messages/${messageId}/reactions`), {[pcId]: reactions})
     },
     getIP() {
-        axios.get('https://api.ipify.org/?format=json').then(res => console.log(res.data))
+        axios.get('https://api.ipify.org/?format=json')
+        .then(res => res.data)
+        .catch(err => err)
     }
 }
