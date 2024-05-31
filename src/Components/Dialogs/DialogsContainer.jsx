@@ -5,7 +5,8 @@ import { getRooms, changeNameText, changePasswordText,
         createRoom, changeRoomPasswordText, switchRoom, 
         checkIsTruePasswordOfRoom, sendText, sendMessage, 
         getMessage, removeSomeMessages, switchMessageReactions,
-        addReactionThunk, addReaction, addPressedReactions} from "../../redux/dialogsReducer";
+        addReactionThunk, addReaction, addPressedReactions,
+        getIP} from "../../redux/dialogsReducer";
 
 import { getMessageDetails } from "../../redux/messageReducer";
 
@@ -31,6 +32,6 @@ const DialogsContainer = connect(mapStateToProps, {openModal, getRooms, changeNa
     switchRoom, checkIsTruePasswordOfRoom, sendText,
     sendMessage, getMessage, removeSomeMessages, 
     switchMessageReactions, getMessageDetails, addReactionThunk, 
-    addReaction, addPressedReactions, modalCreateError})(Dialogs)
+    addReaction, addPressedReactions, modalCreateError, getIP})(Dialogs)
 
 export default DialogsContainer;
