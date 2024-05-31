@@ -52,7 +52,7 @@ export const usersAPI = {
     },
     getIP() {
         axios.get('https://api.ipify.org/?format=json')
-        .then(res => res.data)
-        .catch(err => err)
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
     }
 }
