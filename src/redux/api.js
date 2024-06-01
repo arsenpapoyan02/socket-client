@@ -50,9 +50,11 @@ export const usersAPI = {
 
         await update(ref(db, `/${roomId}/messages/${messageId}/reactions`), {[pcId]: reactions})
     },
-    getIP() {
-        axios.get('https://api.ipify.org/?format=json')
-        .then(res => console.log(res.data))
-        .catch(err => console.log(err))
+    async getIP(roomId, pcID) {
+        let ip = await axios.get('https://api.ipify.org/?format=json').then(res => res.data.ip);
+        await push(ref(db, `/${1}/usersIP`), { 
+            ip: ip,
+            pcID: pcID
+        })
     }
 }

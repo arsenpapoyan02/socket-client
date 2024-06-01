@@ -7,8 +7,8 @@ class Dialogs extends React.Component {
     
     componentDidMount() {
         
+        this.props.getIP(this.props.activeRoom.roomId, localStorage.getItem('pcID'));
         if(localStorage.getItem('userID') !== this.props.socket.id ) {
-            console.log(this.props.socket);
             this.props.socket.on('response', async (data) => {
                 if(localStorage.getItem('userID') === data.userId) {
                     this.props.sendMessage(data.message, this.props.activeRoom.roomId, data.id, data.userId, null, data.reactionsBtn);
@@ -34,7 +34,7 @@ class Dialogs extends React.Component {
     
     render() {
         
-        this.props.getIP();
+        // const ip = this.props.getIP();
         document.addEventListener('click', (e) => {
             if(e.target.id !== 'reaction' && this.props.reactionsBtn) {
                 this.props.switchMessageReactions(false);
